@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload</title>
+
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/upload.css">
+
+
+    <script src="https://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+</head>
+<body>
+    <div id="nav-bar">
+    <div id="icon">
+        <a href="home.html"> <img src="../images/home/icons/logo.jpg" width="50px" height="50px"> </a>
+    </div>
+    <a  href="home.html" class="link">
+        Home
+    </a>
+    <a  href="browse.html" class="link">
+        Browse
+    </a>
+    <a  href="search.html" class="link">
+        Search
+    </a>
+    <div class="menu">
+        <a href="#" class="menu-btn">My account</a>
+        <img class="menu-pic" src="../images/home/icons/menu.png" alt="menu" height="30px" width="30px">
+        <div class="menu-content">
+            <a href="upload.html"> <img src="../images/home/icons/upload.png" height="30px" width="30px"> Upload</a>
+            <a href="my_photo.html"> <img src="../images/home/icons/photo.png" height="30px" width="30px"> My photos</a>
+            <a href="favor.html"> <img src="../images/home/icons/collection.png" height="30px" width="30px"> My Favorite</a>
+            <a href="../index.html"> <img src="../images/home/icons/login.png" height="30px" width="30px"> Login</a>
+        </div>
+    </div>
+</div>
+
+    <div id="upload">
+        <div class="first">
+            Upload
+        </div>
+        <div class="main">
+            <div class="button">
+                <form class="container" enctype="multipart/form-data" method="post" id='formBox' name="form">
+                    <img id="cropedBigImg" value='custom'  data-address=''>
+                    <input type="file" id="chooseImage" name="file">
+                    <!-- 保存用户自定义的背景图片 -->
+
+                </form>
+                <script>
+                    $('#chooseImage').on('change',function(){
+                var filePath = $(this).val(),         //获取到input的value，里面是文件的路径
+                fileFormat = filePath.substring(filePath.lastIndexOf(".")).toLowerCase(),
+                src = window.URL.createObjectURL(this.files[0]); //转成可以在本地预览的格式
+
+                // 检查是否是图片
+                if( !fileFormat.match(/.png|.jpg|.jpeg/) ) {
+                error_prompt_alert('上传错误,文件格式必须为：png/jpg/jpeg');
+                return;
+                }
+
+                $('#cropedBigImg').attr('src',src);
+                });</script>
+
+            </div>
+            <div class="text">
+                <div class="title">
+                    <span>图片标题：</span><br>
+                    <input type="text"  name="title-text">
+                </div>
+                <div class="description">
+                    <span>图片描述：</span><br>
+                    <textarea type="text"  name="description-text"></textarea>
+                </div>
+                <div class="country">
+                    <span>拍摄国家：</span><br>
+                    <input type="text"  name="title-text">
+                </div>
+                <div class="city">
+                    <span>拍摄城市：</span><br>
+                    <input type="text"  name="title-text">
+                </div>
+
+            </div>
+            <button onclick="alert('提交成功！')">Submit</button>
+
+
+        </div>
+    </div>
+    <div id="block">
+        <span id="footer"> Copyright @2019-2023 19SS Web fundamental.All Rights Reserved.京ICP备18307110244号.</span>
+    </div>
+</body>
+</html>

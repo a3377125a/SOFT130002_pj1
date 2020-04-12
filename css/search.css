@@ -1,0 +1,241 @@
+body{
+    font-family:"Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 1vw;
+}
+#icon{
+    float: left;
+}
+#nav-bar{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+}
+.link,.menu{
+    display: block;
+    padding-top: 17px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-sizing: border-box;
+    height: 50px;
+    width: 120px;
+    float: left;
+}
+.link.active{
+    background-color: rgba(37, 64, 156, 0.43);
+}
+.link:hover{
+    background-color: rgba(218, 218, 218, 0.24);
+}
+.menu{
+    float: right;
+    position: relative;
+    width: auto;
+}
+.menu-btn{
+    color: white;
+    font-weight: bold;
+}
+.menu-content a{
+    display: block;
+    color: white;
+    font-size: small;
+    padding: 12px 0 12px 20px;
+    text-align: left;
+}
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.menu:hover .menu-content {
+    display: block;
+}
+.menu-pic{
+    float: right;
+    margin-top: -6px;
+}
+.menu-content img{
+    margin-top: -9px;
+    margin-right: 10px;
+    float: left;
+}
+.menu-content a:hover{
+    background-color: rgba(218, 218, 218, 0.24);
+}
+
+#search{
+    border: inset 2px #7e8c8d;
+    margin-top: 3vh;
+    margin-left: 2.5vw;
+    width: 95vw;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#search .first{
+    width: 100%;
+    background-color: rgba(111, 127, 128, 0.17);
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1.5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: solid 1px rgba(73, 51, 57, 0.6);
+}
+.by-title{
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.by-title span{
+    font-weight: bold;
+    margin-left: 0.6vw;
+}
+.by-title [type="text"]{
+    margin-top: 1.5vh;
+    width: 85vw;
+    height: 3vh;
+    border-radius: 5px;
+    font-size: 1.5vmax;
+}
+
+.by-description{
+    margin-left: 1vw;
+    margin-top: 2vh;
+}
+.by-description span{
+    font-weight: bold;
+    margin-left: 0.6vw;
+}
+.by-description textarea{
+    margin-top: 1.5vh;
+    width: 87vw;
+    height: 12vh;
+    border-radius: 5px;
+    font-size: 1.5vmax;
+}
+.second button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    border-radius:5px ;
+    height: 6vh;
+    width: 11vw;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    margin-left: 1vw;
+}
+#result{
+    border: inset 2px #7e8c8d;
+    margin-top: 3vh;
+    margin-left: 2.5vw;
+    width: 95vw;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#result .first{
+    width: 100%;
+    background-color: rgba(111, 127, 128, 0.17);
+    text-align: left;
+    font-weight: bold;
+    padding-left: 1.5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom: solid 1px rgba(73, 51, 57, 0.6);
+}
+#result .pics{
+    width: 100%;
+}
+#result .pics .line{
+    width: 100%;
+    border-bottom: solid 1px rgba(73, 51, 57, 0.6);
+    height: 23vw;
+}
+#result .pics .line .pic-div{
+    float: left;
+    overflow: hidden;
+    width: 20vw;
+    height: 20vw;
+
+
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1.5vw;
+}
+#result .pics .line .text{
+    float: right;
+    width: 62%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin-top: 3vh;
+    margin-right: 13vw;
+    border-bottom: none;
+}
+#result .pics h1{
+    font-weight: bold;
+    font-size: 2vw;
+    margin-bottom: 3vh;
+}
+#result .pics article{
+    line-height: 3vh;
+    overflow: hidden;
+}
+#result .pics .last{
+    border: none;
+}
+#result .pics .foot{
+    border-bottom: none;
+    width: 100%;
+    margin-top: 7vh;
+    margin-bottom: 2vh;
+}
+
+.pics .foot a{
+    font-weight: bold;
+    margin-left: 40%;
+    color: blue;
+}
+.pics .foot span{
+    margin-left: 1vw;
+    font-weight: bold;
+}
+.pics .foot .sp{
+    color: #515151;
+    cursor: default;
+}
+#block{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+}
+#footer{
+    position: absolute;
+    bottom: 1vw;
+    left: 2.5vw;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
